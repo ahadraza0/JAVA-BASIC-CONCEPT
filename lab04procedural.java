@@ -1,36 +1,38 @@
-import java.util.Scanner;
 public class lab04procedural 
 {
-    public static void setaccountbalance()
+    static String CarModel;
+    public static void setcarmodel(String model)
     {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("the account balance:");
-        int accountbalance = sc.nextInt();
+        CarModel = model;
     }
-    public static void setshowsbalance()
+    static String CarName;
+    public static void setcarname(String CName)
     {
-        int accountbalance;
-         System.out.println("the amount in your account balance is"+ ("rs"));        
+        CarName=CName;
     }
-    public static void setwithdraw()
+    static int CarPrice;
+    public static void setcarprice(int price)
     {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("the amount you want to withdram is:");
-        int draw = sc.nextInt();
-        System.out.println("withdraw amount is:" + draw + ("RS"));
+        CarPrice = price;
     }
-    public static void setdeposit()
+    static String CarOwner;
+    public static void setcarowner(String owner)
     {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("how much amount you want to deposit:");
-        int deposit = sc.nextInt();
-        System.out.println("your deposit amount is:" + deposit + ("RS"));
+        CarOwner = owner;
+    }
+    public static void showdetail()
+    {
+        System.out.println("CAR MODEL:"+ CarModel);
+        System.out.println("CAR NAME:"+ CarName);
+        System.out.println("CAR PRICE IN $"+ CarPrice);
+        System.out.println("CAR OWNER:"+ CarOwner);
     }
     public static void main(String[] args)
     {
-        setaccountbalance();
-        setwithdraw();
-        setdeposit();
+        setcarmodel("MODEL Y");
+        setcarname("TESLA");
+        setcarprice(45960);
+        setcarowner("ABDUL AHAD RAZA");
+        showdetail();
     }
 }
-

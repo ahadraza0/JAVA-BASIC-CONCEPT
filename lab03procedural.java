@@ -1,40 +1,31 @@
-import java.util.Scanner;
 public class lab03procedural 
 {
-    public static void CarModel()
+    static int accountbalance;
+    public static void setaccountbalance(int account)
     {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("what is the model of your car:");
-        String model = sc.next();
-        System.out.println("your car model is:"+ model);
+        accountbalance = account;
     }
-    public static void CarName()
+    static int deposit;
+    public static void setamountdeposit(int dp)
     {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("what id your car name is:");
-        String car = sc.next();
-        System.out.println("your car name is:"+ car);
+        deposit = dp;
     }
-    public static void CarPrice()
+    static int drawamount;
+    public static void setwithdrawamount(int dw)
     {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("what is the price of your car is:");
-        int price = sc.nextInt();
-        System.out.println("your car price is:" + price);         
+        drawamount = dw;
     }
-    public static void CarOwner()
+    public static void showaccountbalacne()
     {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("who is the onwer of this car:");
-        String owner = sc.next();
-        System.out.println("the owner of this car is:"+ owner);
+        System.out.println("the account balance:"+ accountbalance);
+        System.out.println("the deposit amount is:"+ deposit);
+        System.out.println("the withdraw amount is"+ drawamount);
     }
     public static void main(String[] args)
     {
-        CarModel();
-        CarName();
-        CarPrice();
-        CarOwner();
+        setaccountbalance(15000);
+        setamountdeposit(5000);
+        setwithdrawamount(5000);
+        showaccountbalacne();
     }
-        
 }
